@@ -1,7 +1,7 @@
 #include <Arduino.h>
 #include "hal/hal_gpio.h"
 #include "hal/hal_delay.h"
-#include "drivers/hal_7_segment.h"
+#include "drivers/seven_segment.h"
 void setup() {
   seven_segment_init(2,3,4,5,6,7,8,9,'A');
   hal_gpio_init(14,'O');

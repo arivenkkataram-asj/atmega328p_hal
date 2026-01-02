@@ -1,4 +1,4 @@
-#include "hal/hal_gpio.c"
+#include "hal/hal_gpio.h"
 //uploading this there is noise build up in the digital pin no 13
 //Port no 13 will glow dim according to the blink of the any port b pins as 0-4
 //need to check on this code...
