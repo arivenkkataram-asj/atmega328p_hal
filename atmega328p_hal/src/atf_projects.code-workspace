@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "../../.."
+		},
+		{
+			"name": "atmega328p_hal",
+			"path": ".."
+		}
+	],
+	"settings": {}
+}
