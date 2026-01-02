@@ -1,7 +1,7 @@
 #include <Arduino.h>
 #include "hal/hal_gpio.h"
 #include "hal/hal_delay.h"
-#include "drivers/hal_4x4_keypad.h"
+#include "drivers/keypad_4x4.h"
 void setup() {
   hal_gpio_init(13,'O');
   keypad_4x4_init(2,3,4,5,6,7,8,9,'E');
