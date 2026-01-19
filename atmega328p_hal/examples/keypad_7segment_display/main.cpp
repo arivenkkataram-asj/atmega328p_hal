@@ -1,9 +1,11 @@
-#include <Arduino.h>
 #include "hal/hal_gpio.h"
 #include "hal/hal_delay.h"
+#include "hal/hal_timer.h"
+#include "hal/hal_interrupt.h"
+#include "hal/hal_pwm.h"
 #include "drivers/keypad_4x4.h"
 #include "drivers/seven_segment.h"
-void setup() {
+int main(void) { 
   keypad_4x4_init(2,3,4,5,6,7,8,9,'E');
   seven_segment_init(10,11,12,13,14,15,16,'-','A');
   hal_gpio_init(17,'O');
@@ -27,7 +29,5 @@ void setup() {
     hal_gpio_write(18,0);
   }
 
-}
-
-void loop() {
+  
 }

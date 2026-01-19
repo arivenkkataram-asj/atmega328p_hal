@@ -1,13 +1,16 @@
-#include <Arduino.h>
 #include "hal/hal_gpio.h"
 #include "hal/hal_delay.h"
+#include "hal/hal_timer.h"
+#include "hal/hal_interrupt.h"
+#include "hal/hal_pwm.h"
 #include "drivers/seven_segment.h"
-void setup() {
-  seven_segment_init(2,3,4,5,6,7,8,9,'A');
+
+int main(void) { 
+   seven_segment_init(2,3,4,5,6,7,8,9,'A');
   hal_gpio_init(14,'O');
   hal_gpio_init(15,'O');
   char ones,tens;
-  volatile long time;
+ 
   while(1){
     for(tens = 0;tens < 10;tens++){
       for(ones = 0;ones <10;ones++){
@@ -28,7 +31,4 @@ void setup() {
     }
   }
   
-}
-
-void loop() {
 }
