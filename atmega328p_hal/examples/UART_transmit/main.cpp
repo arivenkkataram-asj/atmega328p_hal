@@ -12,18 +12,28 @@ int main(void){
   hal_uart_init(9600);
   uint32_t LED_timer = 0;
   uint8_t LED_state = 0;
-  char sentence[] = "Ready to Receive";
-  char receive_data;
+  uint32_t UART_timer = 100;
+  uint8_t data = 65;
+  char sentence[] = "Caps Alphabets: ";
   while(1){
     if(hal_timeout_expired(LED_timer,500)){ //blink LED every 500ms
       LED_timer = hal_millis();
       LED_state ^= 1;
       hal_gpio_write(13,LED_state);
     }
+    if(data>90){
+      data = 65;
+      hal_Serial_println((char *)" Ended going to next line.");      
+    }
     
-    receive_data = hal_uart_rx_byte();
-    hal_uart_tx_byte(receive_data);
-    
+    if(hal_timeout_expired(UART_timer,100)){ //sending every 1000ms
+      UART_timer = hal_millis();
+      if(data==65){
+        hal_Serial_print(sentence);
+      }
+      hal_uart_tx_byte(data);  //printing from 65 to 89 ASCII value...
+      data ++;
+    }
 
   }
 }
