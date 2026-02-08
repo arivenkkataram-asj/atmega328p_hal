@@ -10,7 +10,7 @@ int main(void){
   hal_enable_interrupt();
   hal_gpio_init(13,'O');
   hal_uart_init(9600);
-  hal_i2c_init(5000000);
+  hal_i2c_init(100000);
 
   uint32_t LED_timer = 0;
   uint8_t LED_state = 0;
