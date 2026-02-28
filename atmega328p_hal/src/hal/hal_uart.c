@@ -4,7 +4,7 @@ void hal_uart_init(uint32_t baud){
     /*
     16000000 is 16MHz crystal . the Formula from the datasheet
     here it set to the Asynchronous normal mode (U2Xn = 0)
-    UBRRn = (f_OSC/16BAUD)-1
+    UBRRn = (f_OSC/8BAUD)-1
     eg: baud = 9600;
     UBRR_data = 103;
     UBRR0 allows 12 bit so 0 to 4096
