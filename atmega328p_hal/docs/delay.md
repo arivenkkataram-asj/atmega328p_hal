@@ -1,7 +1,7 @@
 # Atmega328p Delay
 Currently used the delay funtion as the cpu usage delay.
 ## delay_milli();
-This function used to cpu comsumption for the 1milli second. 
+This function used to cpu consumption for the 1milli second. 
 #### Example:
 ```c
 delay_milli(milli_sec);
