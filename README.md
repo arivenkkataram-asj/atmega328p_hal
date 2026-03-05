@@ -20,6 +20,13 @@ In this GIT Repo inclues the HAL of the Atmega328p and Implementaion of the Vari
 │   ├── gpio.md
 │   ├── keypad_4x4.md
 │   ├── lcd_hd44780.md
+│   ├── adc.md
+│   ├── i2c.md
+│   ├── Interrupt.md
+│   ├── ps2.md
+│   ├── Pwm.md
+│   ├── timer.md
+│   ├── uart.md
 │   └── seven_segment.md
 │
 ├── examples/
@@ -30,16 +37,31 @@ In this GIT Repo inclues the HAL of the Atmega328p and Implementaion of the Vari
 │   ├── lcd_test/
 │   ├── pwm_test/
 │   ├── sample_main_code/
+│   ├── analog_read/
+│   ├── i2c_master_atmega328p/
+│   ├── i2c_master_slave_testing
+│   ├── LED_blink_timer/
+│   ├── PS2_keyboard_read_keys/
+│   ├── Uart_receive/
+│   ├── UART_Transmit/
 │   └── seven_segment_display/
 │
 ├── include/
 │   ├── hal/
 │   │   ├── hal_gpio.h
+│   │   ├── hal_adc.h
+│   │   ├── hal_i2c.h
+│   │   ├── hal_interrupt.h
+│   │   ├── hal_ps2.h
+│   │   ├── hal_pwm.h
+│   │   ├── hal_timer.h
+│   │   ├── hal_uart.h
 │   │   └── hal_delay.h
 │   │
 │   └── drivers/
 │       ├── keypad_4x4.h
 │       ├── lcd_hd44780.h
+│       ├── ps2_keyboard.h 
 │       └── seven_segment.h
 │
 ├── src/
